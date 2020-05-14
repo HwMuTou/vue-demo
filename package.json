@@ -11,7 +11,7 @@
     "lint:nofix": "vue-cli-service lint --no-fix",
     "postinstall": "opencollective-postinstall",
     "deploy": "gh-pages -d dist",
-    "predeploy": "yarn build"
+    "predeploy": "vue-cli-service build --mode development"
   },
   "dependencies": {
     "@antv/data-set": "^0.10.2",
