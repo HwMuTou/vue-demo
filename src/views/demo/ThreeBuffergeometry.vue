@@ -53,8 +53,10 @@
         const normals = []
         const colors = []
         const color = new Color()
-        const n = 800; const n2 = n / 2	// triangles spread in the cube
-        const d = 12; const d2 = d / 2	// individual triangle size
+        const n = 800
+        const n2 = n / 2	// triangles spread in the cube
+        const d = 12
+        const d2 = d / 2	// individual triangle size
         const pA = new Vector3()
         const pB = new Vector3()
         const pC = new Vector3()
@@ -111,10 +113,10 @@
         geometry.computeBoundingSphere()
         const material = new MeshPhongMaterial({
           color: 0xaaaaaa,
-specular: 0xffffff,
-shininess: 250,
+          specular: 0xffffff,
+          shininess: 250,
           side: DoubleSide,
-vertexColors: VertexColors
+          vertexColors: VertexColors
         })
         mesh = new Mesh(geometry, material)
         scene.add(mesh)
