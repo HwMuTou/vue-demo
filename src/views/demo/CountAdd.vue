@@ -17,7 +17,6 @@
       placement="bottom"
       :get-container="false"
       :wrap-style="{ position: 'absolute' }"
-      closable="true"
       @close="onClose"
     >
       <H1>hello, i am drawer Modal</H1>
