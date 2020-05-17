@@ -9456,6 +9456,11 @@ rete-minimap-plugin@^0.3.1:
   dependencies:
     vue "^2.5.17"
 
+rete-profiler-plugin@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.npm.taobao.org/rete-profiler-plugin/download/rete-profiler-plugin-0.2.0.tgz#8575b193439a259b329b19144d6c838bf829f9f7"
+  integrity sha1-hXWxk0OaJZsymxkUTWyDi/gp+fc=
+
 rete-readonly-plugin@^0.4.1:
   version "0.4.1"
   resolved "https://registry.npm.taobao.org/rete-readonly-plugin/download/rete-readonly-plugin-0.4.1.tgz#bb883f2b880161c5c454b3a54ba6ab45ca2fe942"

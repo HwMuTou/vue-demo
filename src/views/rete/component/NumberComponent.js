@@ -1,5 +1,6 @@
 import Rete from 'rete'
 import { numSocket } from '../SocketTypes'
+import NumControl from '@/views/rete/control/NumControl'
 
 export class NumberComponent extends Rete.Component {
   constructor () {
@@ -8,11 +9,12 @@ export class NumberComponent extends Rete.Component {
 
   builder (node) {
     const out = new Rete.Output('number', 'Number', numSocket, true)
-    node.addOutput(out)
+
+    node.addControl(new NumControl(this.editor, 'number')).addOutput(out)
   }
 
   worker (node, inputs, outputs, args) {
-    outputs['number'] = 4
+    outputs['number'] = node.data.number
   }
 }
 

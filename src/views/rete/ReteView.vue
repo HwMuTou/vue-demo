@@ -1,5 +1,5 @@
 <template>
-  <div style="height: 600px;">
+  <div style="height: 900px;">
   </div>
 </template>
 
@@ -12,6 +12,7 @@
   import HistoryPlugin from 'rete-history-plugin'
   import MinimapPlugin from 'rete-minimap-plugin'
   import LifecyclePlugin from 'rete-lifecycle-plugin'
+  import ProfilerPlugin from 'rete-profiler-plugin'
 
   import { component } from '@/views/rete/component'
 
@@ -30,6 +31,8 @@
       editor.use(CommentPlugin)
       editor.use(HistoryPlugin)
       editor.use(LifecyclePlugin)
+
+      engine.use(ProfilerPlugin, { editor, enabled: true })
 
       component.forEach(it => {
         editor.register(it)
@@ -52,11 +55,11 @@
         }
       })
 
-      editor.view.resize()
-      editor.trigger('process')
-
-      const init = '{"id":"demo@0.1.0","nodes":{"10":{"id":10,"data":{},"inputs":{},"outputs":{"number":{"connections":[{"node":11,"input":"numbers","data":{}}]}},"position":[19,-8],"name":"Number"},"11":{"id":11,"data":{},"inputs":{"numbers":{"connections":[{"node":14,"output":"number","data":{}},{"node":10,"output":"number","data":{}},{"node":27,"output":"number","data":{}}]}},"outputs":{"sum":{"connections":[{"node":26,"input":"numbers","data":{}}]}},"position":[357,-8],"name":"Sum"},"14":{"id":14,"data":{},"inputs":{},"outputs":{"number":{"connections":[{"node":11,"input":"numbers","data":{}},{"node":28,"input":"numbers","data":{}}]}},"position":[18,98],"name":"Number"},"26":{"id":26,"data":{},"inputs":{"numbers":{"connections":[{"node":11,"output":"sum","data":{}},{"node":28,"output":"sum","data":{}},{"node":27,"output":"number","data":{}}]}},"outputs":{},"position":[679,286],"name":"View"},"27":{"id":27,"data":{},"inputs":{},"outputs":{"number":{"connections":[{"node":11,"input":"numbers","data":{}},{"node":28,"input":"numbers","data":{}},{"node":26,"input":"numbers","data":{}}]}},"position":[15,205],"name":"Number"},"28":{"id":28,"data":{},"inputs":{"numbers":{"connections":[{"node":14,"output":"number","data":{}},{"node":27,"output":"number","data":{}}]}},"outputs":{"sum":{"connections":[{"node":26,"input":"numbers","data":{}}]}},"position":[357,134],"name":"Sum"}},"comments":[]}'
-      editor.fromJSON(JSON.parse(init))
+      const init = '{"id":"demo@0.1.0","nodes":{"10":{"id":10,"data":{"number":2},"inputs":{},"outputs":{"number":{"connections":[{"node":11,"input":"numbers","data":{}}]}},"position":[334.186917242828,121.14341499444892],"name":"Number"},"11":{"id":11,"data":{},"inputs":{"numbers":{"connections":[{"node":10,"output":"number","data":{}},{"node":14,"output":"number","data":{}}]}},"outputs":{"sum":{"connections":[]}},"position":[648.5733487140546,120.77784260346853],"name":"Sum"},"14":{"id":14,"data":{"number":3},"inputs":{},"outputs":{"number":{"connections":[{"node":11,"input":"numbers","data":{}}]}},"position":[330.1146696261254,312.025856353082],"name":"Number"}},"comments":[]}'
+      editor.fromJSON(JSON.parse(init)).then(() => {
+        editor.view.resize()
+        editor.trigger('process')
+      })
     }
   }
 </script>

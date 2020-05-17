@@ -1,5 +1,5 @@
 import Rete from 'rete'
 
-const numSocket = new Rete.Socket('Number', { color: 'red' })
+const numSocket = new Rete.Socket('Number')
 
 export { numSocket }
