@@ -1,9 +1,27 @@
 <template>
-  <div>
+  <div
+    :style="{overflow: 'hidden',
+             position: 'relative',
+             height: '600px',
+    }">
+
     <h2>
       getCount: {{ count }}
     </h2>
     <Button type="primary" @click="Increment">Add</Button>
+    <br>
+    <Button type="primary" @click="show">Show Model</Button>
+
+    <a-drawer
+      :visible="visible"
+      placement="bottom"
+      :get-container="false"
+      :wrap-style="{ position: 'absolute' }"
+      closable="true"
+      @close="onClose"
+    >
+      <H1>hello, i am drawer Modal</H1>
+    </a-drawer>
   </div>
 </template>
 
@@ -13,11 +31,22 @@
 
   export default {
     name: 'CountAdd',
+    data: function () {
+      return {
+        visible: false
+      }
+    },
     computed: {
       ...mapGetters(['count'])
     },
     methods: {
-      ...mapActions(['Increment'])
+      ...mapActions(['Increment']),
+      onClose () {
+        this.visible = false
+      },
+      show () {
+        this.visible = true
+      }
     },
     components: {
       Button
