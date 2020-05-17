@@ -2,7 +2,7 @@
   <div
     :style="{overflow: 'hidden',
              position: 'relative',
-             height: '600px',
+             height: '70vh'
     }">
 
     <h2>
