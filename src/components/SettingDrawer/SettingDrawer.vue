@@ -6,8 +6,8 @@
       @close="onClose"
       :closable="false"
       :visible="visible"
-      :drawer-style="{ position: 'absolute' }"
-      style="position: absolute"
+      :drawer-style="{ position: 'fixed' }"
+      style="position: fixed"
     >
       <div class="setting-drawer-index-content">
 
@@ -278,7 +278,6 @@ export default {
 </script>
 
 <style lang="less" scoped>
-
   .setting-drawer-index-content {
 
     .setting-drawer-index-blockChecbox {

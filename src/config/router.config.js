@@ -400,6 +400,21 @@ export const asyncRouterMap = [
             meta: { title: 'ThreeBuffergeometry', icon: 'tool', keepAlive: true, permission: ['dashboard'] }
           }
         ]
+      },
+      {
+        path: '/monaco',
+        name: 'monaco',
+        component: PageView,
+        meta: { title: 'Monaco', icon: 'edit', permission: ['dashboard'] },
+        redirect: '/monaco/editor',
+        children: [
+          {
+            path: '/monaco/editor',
+            name: 'Editor',
+            component: () => import('@/views/monaco/Editor'),
+            meta: { title: 'MonacoEditor', icon: 'tool', keepAlive: true, permission: ['dashboard'] }
+          }
+        ]
       }
     ]
   },
