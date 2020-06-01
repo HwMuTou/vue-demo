@@ -99,7 +99,8 @@ const vueConfig = {
 
   // disable source map in production
   productionSourceMap: false,
-  lintOnSave: undefined,
+  // yarn serve eslint check
+  lintOnSave: true,
   // babel-loader no-ignore node_modules/*
   transpileDependencies: [],
   publicPath: '/vue-demo/'

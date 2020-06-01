@@ -415,6 +415,12 @@ export const asyncRouterMap = [
             meta: { title: 'MonacoEditor', icon: 'tool', keepAlive: true, permission: ['dashboard'] }
           }
         ]
+      },
+      {
+        name: 'ant-design-train',
+        path: 'ant-design',
+        component: () => import('@/views/ant/Train'),
+        meta: { title: 'ant-design-train', icon: 'experiment', keepAlive: true, permission: ['dashboard'] }
       }
     ]
   },
