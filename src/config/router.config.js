@@ -337,7 +337,7 @@ export const asyncRouterMap = [
             path: '/rete/editor',
             name: 'ReteEditor',
             component: () => import('@/views/rete/ReteView'),
-            meta: { title: 'ReteEditor', icon: 'tool', keepAlive: true, permission: ['dashboard'] }
+            meta: { title: '工作流编辑', icon: 'tool', keepAlive: true, permission: ['dashboard'] }
           }
         ]
       },
@@ -345,59 +345,59 @@ export const asyncRouterMap = [
         path: '/demo',
         name: 'demo',
         component: PageView,
-        meta: { title: 'Demo', icon: bxAnaalyse, permission: ['dashboard'] },
+        meta: { title: '功能演示', icon: bxAnaalyse, permission: ['dashboard'] },
         redirect: '/demo/count',
         children: [
           {
             path: '/demo/count',
             name: 'CountAdd',
             component: () => import('@/views/demo/CountAdd'),
-            meta: { title: 'CountAdd', icon: 'tool', keepAlive: true, permission: ['dashboard'] }
+            meta: { title: '状态持久化', icon: 'tool', keepAlive: true, permission: ['dashboard'] }
           }, {
             path: '/demo/d3bar',
             name: 'D3Bar',
             component: () => import('@/views/demo/D3Bar'),
-            meta: { title: 'D3Bar', icon: 'tool', keepAlive: true, permission: ['dashboard'] }
+            meta: { title: '柱状图', icon: 'tool', keepAlive: true, permission: ['dashboard'] }
           }, {
             path: '/demo/D3ForceCenter',
             name: 'D3ForceCenter',
             component: () => import('@/views/demo/D3ForceCenter'),
-            meta: { title: 'D3ForceCenter', icon: 'tool', keepAlive: true, permission: ['dashboard'] }
+            meta: { title: '力学中心点图', icon: 'tool', keepAlive: true, permission: ['dashboard'] }
           }, {
             path: '/demo/D3ForceChart',
             name: 'D3ForceChart',
             component: () => import('@/views/demo/D3ForceChart'),
-            meta: { title: 'D3ForceChart', icon: 'tool', keepAlive: true, permission: ['dashboard'] }
+            meta: { title: '力学网状图', icon: 'tool', keepAlive: true, permission: ['dashboard'] }
           }, {
             path: '/demo/D3ForceWebGL',
             name: 'D3ForceWebGL',
             component: () => import('@/views/demo/D3ForceWebGL'),
-            meta: { title: 'D3ForceWebGL', icon: 'tool', keepAlive: true, permission: ['dashboard'] }
+            meta: { title: '排斥力水流图', icon: 'tool', keepAlive: true, permission: ['dashboard'] }
           }, {
             path: '/demo/D3GeoMapChart',
             name: 'D3GeoMapChart',
             component: () => import('@/views/demo/D3GeoMapChart'),
-            meta: { title: 'D3GeoMapChart', icon: 'tool', keepAlive: true, permission: ['dashboard'] }
+            meta: { title: 'SVG地图', icon: 'tool', keepAlive: true, permission: ['dashboard'] }
           }, {
             path: '/demo/D3PieChart',
             name: 'D3PieChart',
             component: () => import('@/views/demo/D3PieChart'),
-            meta: { title: 'D3PieChart', icon: 'tool', keepAlive: true, permission: ['dashboard'] }
+            meta: { title: '饼状图', icon: 'tool', keepAlive: true, permission: ['dashboard'] }
           }, {
             path: '/demo/ElementDemo',
             name: 'ElementDemo',
             component: () => import('@/views/demo/ElementDemo'),
-            meta: { title: 'ElementDemo', icon: 'tool', keepAlive: true, permission: ['dashboard'] }
+            meta: { title: '一般UI示例', icon: 'tool', keepAlive: true, permission: ['dashboard'] }
           }, {
             path: '/demo/Stopwatch',
             name: 'Stopwatch',
             component: () => import('@/views/demo/Stopwatch'),
-            meta: { title: 'Stopwatch', icon: 'tool', keepAlive: true, permission: ['dashboard'] }
+            meta: { title: '页面记时', icon: 'tool', keepAlive: true, permission: ['dashboard'] }
           }, {
             path: '/demo/ThreeBuffergeometry',
             name: 'ThreeBuffergeometry',
             component: () => import('@/views/demo/ThreeBuffergeometry'),
-            meta: { title: 'ThreeBuffergeometry', icon: 'tool', keepAlive: true, permission: ['dashboard'] }
+            meta: { title: 'ThreeJS 3D效果', icon: 'tool', keepAlive: true, permission: ['dashboard'] }
           }
         ]
       },
@@ -405,22 +405,31 @@ export const asyncRouterMap = [
         path: '/monaco',
         name: 'monaco',
         component: PageView,
-        meta: { title: 'Monaco', icon: 'edit', permission: ['dashboard'] },
+        meta: { title: 'Monaco编辑器', icon: 'edit', permission: ['dashboard'] },
         redirect: '/monaco/editor',
         children: [
           {
             path: '/monaco/editor',
             name: 'Editor',
             component: () => import('@/views/monaco/Editor'),
-            meta: { title: 'MonacoEditor', icon: 'tool', keepAlive: true, permission: ['dashboard'] }
+            meta: { title: 'Monaco编辑器', icon: 'tool', keepAlive: true, permission: ['dashboard'] }
           }
         ]
       },
       {
         name: 'AntDesign',
         path: '/ant-design',
-        component: () => import('@/views/ant/Training'),
-        meta: { title: 'AntDesign', icon: 'experiment', keepAlive: true, permission: ['dashboard'] }
+        component: PageView,
+        redirect: '/ant-design/index',
+        meta: { title: 'AntDesign样例', icon: 'experiment', keepAlive: true, permission: ['dashboard'] },
+        children: [
+          {
+            path: '/ant-design/index',
+            name: 'Training',
+            component: () => import('@/views/ant/Training'),
+            meta: { title: 'AntDesign样例', icon: 'experiment', keepAlive: true, permission: ['dashboard'] }
+          }
+        ]
       }
     ]
   },
