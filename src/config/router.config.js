@@ -417,9 +417,9 @@ export const asyncRouterMap = [
         ]
       },
       {
-        name: 'ant-design-train',
-        path: 'ant-design',
-        component: () => import('@/views/ant/Train'),
+        name: 'AntDesign',
+        path: '/ant-design',
+        component: () => import('@/views/ant/Training'),
         meta: { title: 'ant-design-train', icon: 'experiment', keepAlive: true, permission: ['dashboard'] }
       }
     ]
