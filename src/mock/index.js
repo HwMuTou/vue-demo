@@ -1,6 +1,7 @@
 import { isIE } from '@/utils/util'
 
 // 判断环境不是 prod 或者 preview 是 true 时，加载 mock 服务
+// eslint-disable-next-line no-constant-condition
 if (process.env.NODE_ENV !== 'production' || process.env.VUE_APP_PREVIEW === 'true' || true) {
   // TODO 演示项目 通过 '|| true' 始终允许mock
 
