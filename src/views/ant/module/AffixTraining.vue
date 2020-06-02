@@ -1,6 +1,6 @@
 <template>
   <Affix :offset-bottom="bottom">
-    <a-button icon="yuque"/>
+    <a-button icon="yuque"/> Bottom 50 基于 js 实现的粘性布局
   </Affix>
 </template>
 

@@ -25,6 +25,14 @@
         <EmailAutoComplete/>
       </a-col>
     </a-row>
+    <a-row :gutter="[32,8]">
+      <a-col span="6">
+        <TimelineTraining/>
+      </a-col>
+      <a-col span="6">
+        <TreeTraining/>
+      </a-col>
+    </a-row>
   </div>
 </template>
 
@@ -34,19 +42,20 @@
   import AffixTraining from '@/views/ant/module/AffixTraining'
   import PaginationTraining from '@/views/ant/module/PaginationTraining'
   import EmailAutoComplete from '@/views/ant/module/EmailAutoComplete'
+  import TimelineTraining from '@/views/ant/module/TimelineTraining'
+  import TreeTraining from '@/views/ant/module/TreeTraining'
 
   export default {
     name: 'Train',
     components: {
+      TreeTraining,
       StepTraining,
       DropdownTraining,
       AffixTraining,
       PaginationTraining,
-      EmailAutoComplete
+      EmailAutoComplete,
+      TimelineTraining
     }
   }
 </script>
 
-<style scoped>
-
-</style>
