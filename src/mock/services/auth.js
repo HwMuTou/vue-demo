@@ -18,7 +18,7 @@ const login = (options) => {
     'name': Mock.mock('@name'),
     'username': 'admin',
     'password': '',
-    'avatar': 'https://gw.alipayobjects.com/zos/rmsportal/jZUIxmJycoymBprLOUbT.png',
+    'avatar': 'https://img2.woyaogexing.com/2020/03/01/63dba6d27b79483ea51f51c42c0604cd!400x400.jpeg',
     'status': 1,
     'telephone': '',
     'lastLoginIp': '27.154.74.117',
