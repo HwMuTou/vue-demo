@@ -420,7 +420,7 @@ export const asyncRouterMap = [
         name: 'AntDesign',
         path: '/ant-design',
         component: () => import('@/views/ant/Training'),
-        meta: { title: 'ant-design-train', icon: 'experiment', keepAlive: true, permission: ['dashboard'] }
+        meta: { title: 'AntDesign', icon: 'experiment', keepAlive: true, permission: ['dashboard'] }
       }
     ]
   },
