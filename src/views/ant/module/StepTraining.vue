@@ -19,9 +19,9 @@
       return {
         current: 0,
         steps: [
-          { title: 'dashboard', icon: 'dashboard', description: '<a-icon type="dashboard" />' },
-          { title: 'database', icon: 'database', description: '<a-icon type="database" />' },
-          { title: 'dislike', icon: 'dislike', description: '<a-icon type="dislike" />' }
+          { title: 'dashboard', icon: 'dashboard', description: 'icon dashboard' },
+          { title: 'database', icon: 'database', description: 'icon database' },
+          { title: 'dislike', icon: 'dislike', description: 'icon dislike' }
         ]
       }
     },
