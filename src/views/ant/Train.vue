@@ -1,9 +1,9 @@
 <template>
-    <a-row>
-      <a-col :span="24">
-       <StepTrain/>
-      </a-col>
-    </a-row>
+  <a-row>
+    <a-col :span="24">
+      <StepTrain/>
+    </a-col>
+  </a-row>
 </template>
 
 <script>

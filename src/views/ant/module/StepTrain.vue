@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <a-row>
     <a-steps :current="current">
       <a-step v-for="step in steps" :title="step.title" :key="step.title" :description="step.description">
         <a-icon slot="icon" :type="step.icon" />
@@ -9,7 +9,7 @@
       <a-button @click="goNextStep" type="primary"><a-icon type="left"/>下一步</a-button>
       <a-button @click="goPreviousStep" type="primary">上一步<a-icon type="right"/></a-button>
     </a-button-group>
-  </div>
+  </a-row>
 </template>
 
 <script>
