@@ -9,7 +9,6 @@
     "lint": "vue-cli-service lint",
     "build:preview": "vue-cli-service build --mode preview",
     "lint:nofix": "vue-cli-service lint --no-fix",
-    "postinstall": "opencollective-postinstall",
     "deploy": "gh-pages -d dist",
     "predeploy": "vue-cli-service build"
   },
@@ -68,8 +67,6 @@
     "gh-pages": "^2.1.1",
     "less": "^3.0.4",
     "less-loader": "^5.0.0",
-    "opencollective": "^1.0.3",
-    "opencollective-postinstall": "^2.0.2",
     "vue-svg-icon-loader": "^2.1.1",
     "vue-template-compiler": "^2.6.10",
     "webpack-theme-color-replacer": "^1.2.17"
