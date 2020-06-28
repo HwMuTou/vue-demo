@@ -162,7 +162,7 @@
 </template>
 
 <script>
-import pick from 'lodash.pick'
+import { pick } from 'lodash'
 import { STable } from '@/components'
 import { getRoleList, getServiceList } from '@/api/manage'
 import { PERMISSION_ENUM } from '@/utils/helper/permission'

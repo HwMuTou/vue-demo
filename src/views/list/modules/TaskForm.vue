@@ -35,7 +35,7 @@
 </template>
 
 <script>
-import pick from 'lodash.pick'
+import { pick } from 'lodash'
 
 export default {
   name: 'TaskForm',
