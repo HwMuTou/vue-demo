@@ -52,8 +52,6 @@ yarn run lint
 
 ### Other
 
-- **IMPORTANT : About Issue feedback !! when opening Issue read [Issue / PR Contributing](https://github.com/sendya/ant-design-pro-vue/issues/90)**
-
 - [Vue-cli3](https://cli.vuejs.org/guide/) used by the project.
 
 - Disable Eslint (not recommended): remove `eslintConfig`  field in `package.json`  and `vue.config.js` field `lintOnSave: false`
