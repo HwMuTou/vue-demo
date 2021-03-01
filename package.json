@@ -36,7 +36,7 @@
     "rete-profiler-plugin": "^0.2.0",
     "rete-readonly-plugin": "^0.4.1",
     "rete-vue-render-plugin": "^0.5.0",
-    "three": "^0.116.1",
+    "three": "^0.125.0",
     "viser-vue": "^2.4.6",
     "vue": "^2.6.10",
     "vue-clipboard2": "^0.2.1",
